@@ -474,6 +474,15 @@ namespace EGIS.Controls
         #endregion
 
         /// <summary>
+        /// Initializes a new <see cref="SFMap"/> control with the default settings
+        /// (WGS-84 CRS, zoom level 1 : 1, default mouse-wheel zoom mode).  
+        /// This parameter-less constructor exists primarily for the WinForms
+        /// designer, and delegates to the main constructor.
+        /// </summary>
+        public SFMap() : this(EGIS.Projections.CoordinateReferenceSystemFactory.Wgs84EpsgCode)
+        { }
+
+        /// <summary>
         /// SFMap contructor
         /// </summary>
         public SFMap(int CRSById = EGIS.Projections.CoordinateReferenceSystemFactory.Wgs84EpsgCode)
